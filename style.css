@@ -578,3 +578,13 @@ footer {
   right: 219px;
   z-index: 1005;
 }
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.card .btn {
+  margin-top: 1.5rem;
+  align-self: flex-start;
+}
