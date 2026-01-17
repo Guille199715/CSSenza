@@ -4,95 +4,229 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CSSENZA STUDIO | Guillermo</title>
+
+  <!-- SEO básico -->
+  <meta name="description" content="Diseño y desarrollo web moderno en Rosario. Front-end creativo enfocado en experiencia, diseño y resultados." />
+  <meta name="author" content="Guillermo - CSSENZA STUDIO">
+  <meta name="robots" content="index, follow">
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-<a href="https://wa.me/5493412473546" class="boton-wsp" target="_blank" aria-label="WhatsApp">
-  <img src="whatsapp.svg" alt="WhatsApp" />
-</a>
-  <!-- Loader -->
-  <div id="loader">
-    <h1 class="logo">CSSENZA STUDIO</h1>
-  </div>
+
+<!-- Scroll progress -->
+<div id="scroll-progress"></div>
+
+<!-- Loader -->
+<div id="loader">
+  <h1 class="logo">CSSENZA STUDIO</h1>
+</div>
+
+<!-- HEADER -->
 <header class="encabezado">
+
   <div class="branding">
-    <h1><span>CSSENZA STUDIO</span></h1>
-    <p class="subtitulo">Front-End creativo por Guillermo</p>
+    <h1>CSSENZA STUDIO</h1>
+    <p class="subtitulo">
+      Front-end creativo enfocado en experiencia, diseño y resultados
+    </p>
   </div>
+
+  <!-- Botón hamburguesa -->
+  <button id="menuToggle" class="hamburguesa" aria-label="Abrir menú">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+  <!-- Menú desktop -->
   <nav class="menu">
-  <button id="menuToggle" class="hamburguesa">☰</button>
-  <ul id="menuLista" class="menu-lista">
-    <li><a href="#proyectos">Proyectos</a></li>
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-    <li><button id="modoToggle">🌙</button></li>
+    <ul class="menu-lista">
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li>
+        <button id="modoToggle" aria-label="Cambiar modo">🌙</button>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- OVERLAY MOBILE -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<!-- DRAWER MOBILE -->
+<nav class="menu-drawer" id="menuDrawer">
+  <button class="cerrar-menu" id="menuClose" aria-label="Cerrar menú">✕</button>
+
+<ul class="menu-drawer-lista">
+  <li><a href="#proyectos">Proyectos</a></li>
+  <li><a href="#servicios">Servicios</a></li>
+  <li><a href="#proceso">Proceso</a></li>
+  <li><a href="#contacto">Contacto</a></li>
+</ul>
+
+<button
+  id="modoToggleMobile"
+  class="modo-icono modo-mobile"
+  aria-label="Cambiar modo"
+>
+  🌙
+</button>
+
+    </li>
+
+<div class="menu-drawer-social">
+  <a href="https://wa.me/5493412473546" target="_blank" aria-label="WhatsApp">
+    <img src="./whatsapp.svg" alt="WhatsApp">
+  </a>
+
+  <a href="https://www.instagram.com/cssenza" target="_blank" aria-label="Instagram">
+    <img src="./instagram.svg" alt="Instagram">
+  </a>
+</div>
+
   </ul>
 </nav>
-</header>
-  <!-- Hero -->
-  <section class="hero animar">
-    <h2>Diseño web que encanta y convierte</h2>
-    <p>Interfaces animadas, experiencias memorables y código limpio.</p>
-    <a href="#proyectos" class="btn">Ver portfolio</a>
-  </section>
 
-  <!-- Proyectos -->
-  <section id="proyectos" class="animar">
-    <h3>Proyectos destacados</h3>
-    <div class="grid">
-      <div class="card animar">
-  <div class="icono">💅</div>
-  <h4>Landing para Divine Nails</h4>
-  <p>Diseño visual con estilo kawaii, íconos personalizados, contacto directo por WhatsApp e Instagram, y optimización mobile para <strong>Divine Nails</strong>, salón de uñas en Alvear, Santa Fe.</p>
-  <a href="https://guille199715.github.io/DivineNails/" target="_blank" class="btn">Ver proyecto</a>
+<!-- HERO -->
+<section class="hero animar">
+  <h2>Diseño webs modernas que hacen ver profesional a tu negocio</h2>
+  <p>
+    Creo sitios rápidos, claros y atractivos para marcas que quieren destacar y generar confianza desde el primer clic.
+  </p>
+  <a href="#contacto" class="btn">Quiero mi web</a>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos" class="animar">
+  <h3>Proyectos destacados</h3>
+  <p class="intro-proyectos">
+    Algunos proyectos reales donde combiné diseño, animación y usabilidad.
+  </p>
+
+  <div class="grid">
+    <div class="card animar">
+      <div class="icono">💅</div>
+      <h4>Landing para Divine Nails</h4>
+      <p>
+        Diseño visual con estilo kawaii, contacto directo por WhatsApp e Instagram y optimización mobile.
+      </p>
+      <a href="https://guille199715.github.io/DivineNails/" target="_blank" class="btn">Ver proyecto</a>
+    </div>
+
+    <div class="card animar">
+      <div class="icono">🧑‍🎨</div>
+      <h4>Portfolio CSSENZA STUDIO</h4>
+      <p>
+        Landing personal con animaciones, modo oscuro y branding visual.
+      </p>
+      <a href="#" class="btn">Ver proyecto</a>
+    </div>
+
+    <div class="card animar">
+      <div class="icono">🧪</div>
+      <h4>Demo experimental</h4>
+      <p>
+        Exploración de animaciones, microinteracciones y layouts responsive.
+      </p>
+      <a href="https://guille199715.github.io/DemoCssenza/" target="_blank" class="btn">Ver demo</a>
+    </div>
+
+    <div class="card animar">
+      <div class="icono">📱</div>
+      <h4>Optimización Mobile</h4>
+      <p>
+        Sitios adaptados para celulares con navegación clara y tipografía legible.
+      </p>
+      <a href="#contacto" class="btn">Solicitar mejora</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="animar">
+  <h3>¿Qué puedo hacer por tu marca?</h3>
+  <ul>
+    <li>🎨 Diseño moderno y claro</li>
+    <li>⚡ Animaciones sutiles</li>
+    <li>📱 Optimización mobile</li>
+    <li>🚀 Identidad visual coherente</li>
+  </ul>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso" class="animar">
+  <h3>Cómo trabajo</h3>
+
+  <p class="intro-proceso">
+    Un proceso claro, simple y transparente para que sepas qué esperar en cada etapa.
+  </p>
+
+  <div class="grid-proceso">
+    <div class="paso">
+      <span class="numero">01</span>
+      <h4>Escuchamos tu idea</h4>
+      <p>Analizamos objetivos y necesidades.</p>
+    </div>
+
+    <div class="paso">
+      <span class="numero">02</span>
+      <h4>Diseñamos la experiencia</h4>
+      <p>Estructura, diseño y flujo.</p>
+    </div>
+
+    <div class="paso">
+      <span class="numero">03</span>
+      <h4>Desarrollamos</h4>
+      <p>Código limpio y optimizado.</p>
+    </div>
+
+    <div class="paso">
+      <span class="numero">04</span>
+      <h4>Entrega</h4>
+      <p>Publicación y acompañamiento.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="animar">
+  <h3>Hablemos</h3>
+  <p>Contame tu idea y la llevamos a una web profesional.</p>
+  <a href="mailto:guillermo@tudominio.com" class="btn">Hablemos</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 CSSENZA STUDIO · Rosario, Argentina</p>
+</footer>
+
+<!-- BOTÓN ARRIBA -->
+<button id="btnTop" aria-label="Volver arriba" class="btn-top">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 5l-7 7h4v7h6v-7h4z" />
+  </svg>
+</button>
+
+
+<!-- BOTONES FLOTANTES -->
+<div class="social-float">
+  <a href="https://wa.me/5493412473546" target="_blank" aria-label="WhatsApp">
+    <img src="./whatsapp.svg" alt="WhatsApp">
+  </a>
+
+  <a href="https://www.instagram.com/cssenza" target="_blank" aria-label="Instagram">
+    <img src="./instagram.svg" alt="Instagram">
+  </a>
 </div>
-<div class="card animar">
-  <div class="icono">🧑‍🎨</div>
-  <h4>Portfolio CSSENZA STUDIO</h4>
-  <p>Landing personal con animaciones GSAP, modo oscuro, menú responsive, branding visual y contacto flotante. Refleja mi estilo creativo y enfoque técnico como front-end developer.</p>
-  <a href="https://tusitioweb.com" target="_blank" class="btn">Ver proyecto</a>
-</div>
-<div class="card animar">
-  <div class="icono">🧪</div>
-  <h4>Demo experimental</h4>
-  <p>Exploración libre de animaciones GSAP, efectos visuales, layout responsive y microinteracciones. Ideal para probar ideas creativas y técnicas avanzadas de UI/UX.</p>
-  <a href="https://guille199715.github.io/DemoCssenza/" target="_blank" class="btn">Ver demo</a>
-</div>
-<div class="card animar">
-  <div class="icono">📱</div>
-  <h4>Optimización Mobile</h4>
-  <p>Adaptación visual y técnica para que cada sitio se vea impecable en celulares. Layout responsive, tipografía escalable, y navegación accesible en pantallas pequeñas.</p>
-  <a href="#contacto" class="btn">Solicitar mejora</a>
-</div>
 
-  </section>
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
 
-  <!-- Servicios -->
-  <section id="servicios" class="animar">
-    <h3>¿Qué puedo hacer por tu marca?</h3>
-    <ul>
-      <li>🎨 Diseño UI/UX moderno</li>
-      <li>⚡ Animaciones con GSAP y ScrollTrigger</li>
-      <li>📱 Optimización mobile y performance</li>
-      <li>🚀 Branding visual para webs</li>
-    </ul>
-  </section>
-
-  <!-- Contacto -->
-  <section id="contacto" class="animar">
-    <h3>Hablemos</h3>
-    <p>¿Tenés una idea? ¡Hagámosla realidad!</p>
-    <a href="mailto:guillermo@tudominio.com" class="btn">Escribime</a>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 CSSENZA STUDIO · Diseñado por Guillermo · Rosario, Argentina</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-  <script type="module" src="script.js"></script>
 </body>
 </html>
