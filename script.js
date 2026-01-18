@@ -26,6 +26,7 @@ function abrirMenu() {
   body.classList.add("menu-abierto");
   menuDrawer.classList.add("activo");
   menuOverlay.classList.add("activo");
+  menuToggle.classList.add("activo");
   body.style.overflow = "hidden";
 }
 
@@ -33,6 +34,7 @@ function cerrarMenu() {
   body.classList.remove("menu-abierto");
   menuDrawer.classList.remove("activo");
   menuOverlay.classList.remove("activo");
+  menuToggle.classList.remove("activo");
   body.style.overflow = "";
 }
 
@@ -54,6 +56,16 @@ function toggleModo() {
 
 if (modoToggle) modoToggle.addEventListener("click", toggleModo);
 if (modoToggleMobile) modoToggleMobile.addEventListener("click", toggleModo);
+
+/* ================================
+   ACTUALIZAR ICONO MODO
+================================ */
+function actualizarIconoModo() {
+  const icono = body.classList.contains("modo-claro") ? "🌞" : "🌙";
+  if (modoToggle) modoToggle.textContent = icono;
+  if (modoToggleMobile) modoToggleMobile.textContent = icono;
+}
+actualizarIconoModo();
 
 /* ================================
    LOADER
@@ -103,9 +115,55 @@ gsap.utils.toArray(".animar").forEach((el, i) => {
     }
   );
 });
-function actualizarIconoModo() {
-  const icono = body.classList.contains("modo-claro") ? "🌞" : "🌙";
-  if (modoToggle) modoToggle.textContent = icono;
-  if (modoToggleMobile) modoToggleMobile.textContent = icono;
+
+/* ================================
+   FORMULARIO AUTOMATIZACIÓN
+================================ */
+const formAutomatizacion = document.getElementById("formAutomatizacion");
+const formMsg = document.getElementById("formMsg");
+
+if (formAutomatizacion) {
+  formAutomatizacion.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const tipo = document.getElementById("tipoProceso").value;
+    const volumen = document.getElementById("volumen").value.trim();
+    const detalle = document.getElementById("detalle").value.trim();
+
+    if (!nombre || !email || !tipo || !volumen || !detalle) {
+      formMsg.textContent = "Completa todos los campos por favor.";
+      formMsg.style.color = "var(--accent)";
+      return;
+    }
+
+    try {
+      const res = await fetch("http://localhost:3000/enviar-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nombre,
+          email,
+          tipoProceso: tipo,
+          volumen,
+          detalle,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.ok) {
+        formMsg.textContent = "Correo enviado correctamente.";
+        formMsg.style.color = "var(--accent)";
+        formAutomatizacion.reset();
+      } else {
+        formMsg.textContent = "Error al enviar. Intenta de nuevo.";
+        formMsg.style.color = "red";
+      }
+    } catch (error) {
+      formMsg.textContent = "Error de conexión con el servidor.";
+      formMsg.style.color = "red";
+    }
+  });
 }
-actualizarIconoModo();
