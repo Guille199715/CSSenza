@@ -2,332 +2,481 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CSSENZA STUDIO | Guillermo</title>
-
-  <!-- SEO básico -->
-  <meta name="description" content="Diseño y desarrollo web moderno en Rosario. Front-end creativo enfocado en experiencia, diseño y resultados." />
-  <meta name="author" content="Guillermo - CSSENZA STUDIO">
-  <meta name="robots" content="index, follow">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSSENZA STUDIO | Diseño web en Rosario</title>
+  <meta
+    name="description"
+    content="CSSENZA STUDIO crea sitios web modernos, rápidos y claros para negocios, marcas personales y emprendimientos."
+  />
+  <meta name="author" content="Guillermo - CSSENZA STUDIO" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#00ffe1" />
+  <link rel="canonical" href="https://cssenza.com.ar/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cssenza.com.ar/" />
+  <meta property="og:title" content="CSSENZA STUDIO | Diseño web moderno" />
+  <meta property="og:description" content="Sitios web modernos, claros y responsive para marcas, negocios y emprendimientos." />
+  <meta property="og:image" content="https://cssenza.com.ar/og-cssenza.png" />
+  <meta property="og:locale" content="es_AR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CSSENZA STUDIO | Diseño web moderno" />
+  <meta name="twitter:description" content="Landing pages, catálogos, portfolios y automatización para negocios que quieren verse profesionales." />
+  <meta name="twitter:image" content="https://cssenza.com.ar/og-cssenza.png" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <div id="scrollProgress" class="scroll-progress"></div>
 
-<!-- Scroll progress -->
-<div id="scroll-progress"></div>
-
-<!-- Loader -->
-<div id="loader">
-  <h1 class="logo">CSSENZA STUDIO</h1>
-</div>
-
-<!-- HEADER -->
-<header class="encabezado">
-
-  <div class="branding">
-    <h1>CSSENZA STUDIO</h1>
-    <p class="subtitulo">
-      Front-end creativo enfocado en experiencia, diseño y resultados
-    </p>
-  </div>
-
-  <!-- Botón hamburguesa -->
-  <button id="menuToggle" class="hamburguesa" aria-label="Abrir menú">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <!-- Menú desktop -->
-  <nav class="menu">
-    <ul class="menu-lista">
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#proceso">Proceso</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-      <li>
-        <button id="modoToggle" aria-label="Cambiar modo">🌙</button>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-<!-- OVERLAY MOBILE -->
-<div class="menu-overlay" id="menuOverlay"></div>
-
-<!-- DRAWER MOBILE -->
-<nav class="menu-drawer" id="menuDrawer">
-  <button class="cerrar-menu" id="menuClose" aria-label="Cerrar menú">✕</button>
-
-  <ul class="menu-drawer-lista">
-    <li><a href="#proyectos">Proyectos</a></li>
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#proceso">Proceso</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
-
-  <button
-    id="modoToggleMobile"
-    class="modo-icono"
-    aria-label="Cambiar modo"
-  >
-    🌙
-  </button>
-
-  <div class="menu-drawer-social">
-    <a href="https://wa.me/5493412473546" target="_blank" aria-label="WhatsApp">
-      <img src="./whatsapp.svg" alt="WhatsApp">
+  <header class="site-header" data-header>
+    <a class="brand" href="#inicio" aria-label="CSSENZA STUDIO">
+      <span class="brand-mark">CS</span>
+      <span>
+        <strong>CSSENZA</strong>
+        <small>STUDIO</small>
+      </span>
     </a>
 
-    <a href="https://www.instagram.com/cssenza" target="_blank" aria-label="Instagram">
-      <img src="./instagram.svg" alt="Instagram">
-    </a>
-  </div>
-</nav>
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#opciones">Opciones</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
 
-<!-- HERO -->
-<section class="hero animar">
-  <h2>Diseño webs modernas que hacen ver profesional a tu negocio</h2>
-  <p>
-    Creo sitios rápidos, claros y atractivos para marcas que quieren destacar y generar confianza desde el primer clic.
-  </p>
-  <a href="#contacto" class="btn">Quiero mi web</a>
-</section>
+    <div class="header-actions">
+      <button class="icon-button" type="button" data-theme-toggle aria-label="Cambiar tema">
+        <span data-theme-icon>☾</span>
+      </button>
+      <a class="header-cta" href="https://wa.me/5493412473546?text=Hola%20Guillermo%2C%20quiero%20consultar%20por%20una%20web%20para%20mi%20negocio." target="_blank" rel="noopener">
+        Empezar
+      </a>
+      <button class="menu-button" type="button" data-menu-toggle aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
-<!-- PROYECTOS -->
-<section id="proyectos" class="animar">
-  <h3>Proyectos destacados</h3>
-  <p class="intro-proyectos">
-    Algunos proyectos reales donde combiné diseño, animación y usabilidad.
-  </p>
+  <div class="menu-overlay" data-menu-overlay></div>
+  <aside class="mobile-menu" data-mobile-menu aria-label="Menú móvil">
+    <div class="mobile-menu-head">
+      <span>CSSENZA STUDIO</span>
+      <button class="icon-button" type="button" data-menu-close aria-label="Cerrar menú">×</button>
+    </div>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#opciones">Opciones</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="mobile-social">
+      <a href="https://wa.me/5493412473546?text=Hola%20Guillermo%2C%20quiero%20consultar%20por%20una%20web%20para%20mi%20negocio." target="_blank" rel="noopener">
+        <img src="whatsapp.svg" alt="" />
+        WhatsApp
+      </a>
+      <a href="https://www.instagram.com/cssenza" target="_blank" rel="noopener">
+        <img src="instagram.svg" alt="" />
+        Instagram
+      </a>
+    </div>
+  </aside>
 
-  <div class="grid">
-    <div class="card animar">
-      <div class="card-top">
-        <div class="icono">💅</div>
-        <h4>Landing para Divine Nails</h4>
+  <main id="inicio">
+    <section class="hero section-clip">
+      <div class="hero-inner reveal">
+        <p class="eyebrow">Diseño web y experiencia digital</p>
+        <h1>CSSENZA STUDIO</h1>
+        <p class="hero-copy">
+          Sitios modernos para marcas que quieren verse profesionales, explicar bien lo que hacen y convertir visitas en conversaciones reales.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/5493412473546?text=Hola%20Guillermo%2C%20quiero%20consultar%20por%20una%20web%20para%20mi%20negocio." target="_blank" rel="noopener">
+            Pedir una web
+          </a>
+          <a class="btn btn-secondary" href="#proyectos">Ver trabajos</a>
+        </div>
+        <div class="hero-badges" aria-label="Puntos fuertes">
+          <span>Responsive</span>
+          <span>Rápida</span>
+          <span>Lista para publicar</span>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#servicios" aria-label="Bajar a servicios">
+        <span></span>
+      </a>
+    </section>
+
+    <section class="impact-strip section-clip" aria-label="Beneficios principales">
+      <div class="impact-item reveal">
+        <strong>01</strong>
+        <span>Diseño pensado para celular desde el inicio.</span>
+      </div>
+      <div class="impact-item reveal">
+        <strong>02</strong>
+        <span>Mensajes claros para que el visitante entienda rápido.</span>
+      </div>
+      <div class="impact-item reveal">
+        <strong>03</strong>
+        <span>Contacto directo por WhatsApp, Instagram o el canal que uses.</span>
+      </div>
+    </section>
+
+    <section id="servicios" class="section-block">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Qué podemos construir</p>
+        <h2>Una presencia digital que no parezca improvisada.</h2>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <span class="service-index">01</span>
+          <h3>Landing pages</h3>
+          <p>Páginas claras para presentar servicios, captar consultas y darle seriedad a tu marca desde el primer vistazo.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-index">02</span>
+          <h3>Rediseños</h3>
+          <p>Renovación visual, mejor estructura, textos más directos y navegación cómoda para celulares y escritorio.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-index">03</span>
+          <h3>Portfolio y marca personal</h3>
+          <p>Sitios con identidad propia para mostrar trabajos, historia, propuesta y canales de contacto sin vueltas.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-index">04</span>
+          <h3>Automatización</h3>
+          <p>Macros, reportes y tableros en Excel para reducir tareas repetitivas. Esta línea queda lista para crecer después.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block audience-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Para quién es</p>
+        <h2>Si necesitás transmitir confianza, una web clara te cambia la primera impresión.</h2>
+      </div>
+
+      <div class="audience-grid">
+        <article class="audience-card reveal">
+          <span>Emprendimientos</span>
+          <p>Para lanzar una idea, validar servicios y tener un lugar serio donde mandar clientes.</p>
+        </article>
+        <article class="audience-card reveal">
+          <span>Comercios</span>
+          <p>Para mostrar productos, horarios, ubicación, redes y consultas por WhatsApp.</p>
+        </article>
+        <article class="audience-card reveal">
+          <span>Profesionales</span>
+          <p>Para ordenar servicios, experiencia y contacto con una presencia más confiable.</p>
+        </article>
+        <article class="audience-card reveal">
+          <span>Marcas personales</span>
+          <p>Para mostrar quién sos, qué hacés y por qué deberían elegirte.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="opciones" class="section-block options-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Opciones para empezar</p>
+        <h2>Elegí el formato que mejor acompaña tu negocio.</h2>
+      </div>
+
+      <div class="option-tabs reveal" role="tablist" aria-label="Opciones de trabajo">
+        <button class="active" type="button" data-option-target="landing" role="tab" aria-selected="true">
+          Landing
+        </button>
+        <button type="button" data-option-target="catalogo" role="tab" aria-selected="false">
+          Catálogo
+        </button>
+        <button type="button" data-option-target="marca" role="tab" aria-selected="false">
+          Marca personal
+        </button>
+        <button type="button" data-option-target="automatizacion" role="tab" aria-selected="false">
+          Automatización
+        </button>
+      </div>
+
+      <div class="option-panels">
+        <article class="option-panel active reveal" data-option-panel="landing" role="tabpanel">
+          <div>
+            <p class="option-label">Para vender un servicio</p>
+            <h3>Landing clara y directa</h3>
+            <p>Ideal si necesitás una página profesional para explicar qué hacés, mostrar beneficios y recibir consultas.</p>
+          </div>
+          <ul>
+            <li>Secciones orientadas a conversión</li>
+            <li>Botones de contacto visibles</li>
+            <li>Diseño responsive y publicación</li>
+          </ul>
+          <a class="btn btn-primary" href="https://wa.me/5493412473546?text=Hola%20Guillermo%2C%20quiero%20consultar%20por%20una%20landing%20page." target="_blank" rel="noopener">Quiero esta opción</a>
+        </article>
+
+        <article class="option-panel reveal" data-option-panel="catalogo" role="tabpanel" hidden>
+          <div>
+            <p class="option-label">Para mostrar productos</p>
+            <h3>Catálogo visual</h3>
+            <p>Una web para presentar muebles, productos, trabajos o servicios con orden visual y consultas rápidas.</p>
+          </div>
+          <ul>
+            <li>Grilla de productos o categorías</li>
+            <li>Ficha visual por producto destacado</li>
+            <li>Contacto directo para pedir presupuesto</li>
+          </ul>
+          <a class="btn btn-primary" href="https://wa.me/5493412473546?text=Hola%20Guillermo%2C%20quiero%20consultar%20por%20un%20cat%C3%A1logo%20web." target="_blank" rel="noopener">Armar catálogo</a>
+        </article>
+
+        <article class="option-panel reveal" data-option-panel="marca" role="tabpanel" hidden>
+          <div>
+            <p class="option-label">Para mostrar quién sos</p>
+            <h3>Portfolio y marca personal</h3>
+            <p>Perfecto para profesionales, estudios, creadores o técnicos que necesitan transmitir confianza.</p>
+          </div>
+          <ul>
+            <li>Presentación personal o de estudio</li>
+            <li>Proyectos, servicios y trayectoria</li>
+            <li>Identidad visual consistente</li>
+          </ul>
+          <a class="btn btn-primary" href="https://wa.me/5493412473546?text=Hola%20Guillermo%2C%20quiero%20consultar%20por%20un%20portfolio%20o%20web%20personal." target="_blank" rel="noopener">Crear mi portfolio</a>
+        </article>
+
+        <article class="option-panel reveal" data-option-panel="automatizacion" role="tabpanel" hidden>
+          <div>
+            <p class="option-label">Para ahorrar tiempo</p>
+            <h3>Excel, macros y reportes</h3>
+            <p>Soluciones para ordenar procesos internos, generar reportes y reducir tareas repetitivas.</p>
+          </div>
+          <ul>
+            <li>Macros en Excel y VBA</li>
+            <li>Reportes y tableros de control</li>
+            <li>Validaciones y limpieza de datos</li>
+          </ul>
+          <a class="btn btn-primary" href="https://wa.me/5493412473546?text=Hola%20Guillermo%2C%20quiero%20consultar%20por%20automatizaci%C3%B3n%20con%20Excel%20o%20procesos." target="_blank" rel="noopener">Optimizar procesos</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="trust-section section-clip reveal">
+      <div>
+        <p class="eyebrow">Forma de trabajo</p>
+        <h2>Trabajo directo, claro y sin vueltas.</h2>
       </div>
       <p>
-        Diseño visual con estilo kawaii, contacto directo por WhatsApp e Instagram y optimización mobile.
+        La idea es que entiendas qué se está haciendo, por qué se hace y cómo eso ayuda a que tu negocio se vea más profesional.
       </p>
-      <div class="card-footer">
-        <a href="https://guille199715.github.io/DivineNails/" target="_blank" class="btn">Ver proyecto</a>
-      </div>
-    </div>
+    </section>
 
-    <div class="card animar">
-      <div class="card-top">
-        <div class="icono">🧑‍🎨</div>
-        <h4>Portfolio CSSENZA STUDIO</h4>
-      </div>
-      <p>
-        Landing personal con animaciones, modo oscuro y branding visual.
-      </p>
-      <div class="card-footer">
-        <a href="#" class="btn">Ver proyecto</a>
-      </div>
-    </div>
-
-    <div class="card animar">
-      <div class="card-top">
-        <div class="icono">🧪</div>
-        <h4>Demo experimental</h4>
-      </div>
-      <p>
-        Exploración de animaciones, microinteracciones y layouts responsive.
-      </p>
-      <div class="card-footer">
-        <a href="https://guille199715.github.io/DemoCssenza/" target="_blank" class="btn">Ver demo</a>
-      </div>
-    </div>
-
-    <div class="card animar">
-      <div class="card-top">
-        <div class="icono">📱</div>
-        <h4>Optimización Mobile</h4>
-      </div>
-      <p>
-        Sitios adaptados para celulares con navegación clara y tipografía legible.
-      </p>
-      <div class="card-footer">
-        <a href="#contacto" class="btn">Solicitar mejora</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AUTOMATIZACIÓN EXCEL / VBA -->
-<section id="automatizacion" class="animar">
-  <h3>Automatización con Excel & VBA</h3>
-  <p class="intro-automatizacion">
-    Optimizo procesos repetitivos en empresas para ahorrar tiempo, reducir errores y mejorar la productividad.
-  </p>
-
-  <!-- TARJETAS MEJORADAS -->
-  <div class="grid-automatizacion">
-    <div class="card-automatizacion">
-      <div class="card-icon">📊</div>
-      <h4>Reportes automáticos</h4>
-      <p>Generación de reportes con actualización automática y envío por email.</p>
-    </div>
-
-    <div class="card-automatizacion">
-      <div class="card-icon">⚙️</div>
-      <h4>Procesos internos</h4>
-      <p>Automatización de carga de datos, conciliaciones y controles de calidad.</p>
-    </div>
-
-    <div class="card-automatizacion">
-      <div class="card-icon">🔁</div>
-      <h4>Integración con sistemas</h4>
-      <p>Conexión con bases de datos, ERP o archivos externos para sincronización automática.</p>
-    </div>
-
-    <div class="card-automatizacion">
-      <div class="card-icon">🚀</div>
-      <h4>Ahorro real de tiempo</h4>
-      <p>Reducimos tareas manuales para que tu equipo se enfoque en lo que realmente importa.</p>
-    </div>
-  </div>
-
-  <!-- CASOS DE USO -->
-  <div class="casos">
-    <h4>Casos de uso reales</h4>
-    <div class="casos-grid">
-      <div class="caso">
-        <h5>📌 Reporte diario automático</h5>
-        <p>Se genera y envía automáticamente un informe con KPIs de ventas cada mañana.</p>
-      </div>
-      <div class="caso">
-        <h5>📌 Conciliación de datos</h5>
-        <p>Se cruzan datos de distintas fuentes y se detectan errores automáticamente.</p>
-      </div>
-      <div class="caso">
-        <h5>📌 Dashboard de control</h5>
-        <p>Tablero con indicadores en tiempo real dentro de Excel.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- FORMULARIO DE COTIZACIÓN -->
-  <div class="form-automatizacion">
-    <h4>Solicitar cotización</h4>
-
-    <form id="formAutomatizacion">
-      <div class="fila">
-        <input type="text" id="nombre" placeholder="Nombre / Empresa" required>
-        <input type="email" id="email" placeholder="Email" required>
+    <section class="section-block details-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Detalles que suman</p>
+        <h2>No es solo que se vea linda. Tiene que funcionar.</h2>
       </div>
 
-      <div class="fila">
-        <select id="tipoProceso" required>
-          <option value="" disabled selected>Tipo de proceso</option>
-          <option value="reportes">Reportes automáticos</option>
-          <option value="conciliacion">Conciliación de datos</option>
-          <option value="integracion">Integración con sistemas</option>
-          <option value="otros">Otros</option>
-        </select>
-        <input type="text" id="volumen" placeholder="Volumen estimado (ej: 1000 filas/día)" required>
+      <div class="detail-grid">
+        <article class="detail-card reveal">
+          <span>Mobile first</span>
+          <p>La experiencia se piensa para celular, donde la mayoría de clientes mira primero.</p>
+        </article>
+        <article class="detail-card reveal">
+          <span>Textos claros</span>
+          <p>Mensajes directos, sin relleno, para que la propuesta se entienda rápido.</p>
+        </article>
+        <article class="detail-card reveal">
+          <span>SEO básico</span>
+          <p>Estructura, títulos y descripción listos para una presencia más prolija en buscadores.</p>
+        </article>
+        <article class="detail-card reveal">
+          <span>Microinteracciones</span>
+          <p>Movimiento sutil para guiar la atención sin molestar ni volver pesada la web.</p>
+        </article>
+        <article class="detail-card reveal">
+          <span>Publicación</span>
+          <p>Dejo la web preparada para compartir, publicar y seguir mejorando cuando haga falta.</p>
+        </article>
+        <article class="detail-card reveal">
+          <span>Escalable</span>
+          <p>La estructura queda lista para sumar nuevas secciones, productos o automatizaciones.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="proyectos" class="section-block project-band">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Trabajos y dirección visual</p>
+        <h2>Proyectos con foco en claridad, ritmo y confianza.</h2>
       </div>
 
-      <textarea id="detalle" placeholder="Descripción del proceso / objetivo" required></textarea>
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <div class="project-preview preview-nails" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="project-content">
+            <p>Landing</p>
+            <h3>Divine Nails</h3>
+            <span>Diseño visual, contacto directo y versión mobile cuidada.</span>
+          </div>
+          <a href="https://guille199715.github.io/DivineNails/" target="_blank" rel="noopener">Ver proyecto</a>
+        </article>
 
-      <button type="submit" class="btn">Enviar solicitud</button>
-      <p id="formMsg" class="form-msg"></p>
-    </form>
-  </div>
-</section>
+        <article class="project-card reveal">
+          <div class="project-preview preview-studio" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="project-content">
+            <p>Portfolio</p>
+            <h3>CSSENZA STUDIO</h3>
+            <span>Marca personal, estética oscura y experiencia responsive.</span>
+          </div>
+          <a href="#inicio">Ver sitio</a>
+        </article>
 
-<!-- SERVICIOS -->
-<section id="servicios" class="animar">
-  <h3>¿Qué puedo hacer por tu marca?</h3>
-<ul>
-  <li>🎨 Diseño moderno y claro</li>
-  <li>⚡ Animaciones sutiles</li>
-  <li>📱 Optimización mobile</li>
-  <li>🚀 Identidad visual coherente</li>
-  <li>📊 Automatización con Excel y VBA</li>
-  <li>🤖 Macros para optimizar procesos</li>
-  <li>⏱️ Ahorro de tiempo en tareas repetitivas</li>
-  <li>🏭 Soluciones para industrias y negocios</li>
-  <li>📈 Reportes automáticos y dashboards</li>
-  <li>🔒 Control y validación de datos</li>
-  <li>🧩 Integración con sistemas y bases de datos</li>
-</ul>
+        <article class="project-card reveal">
+          <div class="project-preview preview-demo" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="project-content">
+            <p>Demo</p>
+            <h3>Interacciones</h3>
+            <span>Pruebas visuales, movimiento sutil y layouts flexibles.</span>
+          </div>
+          <a href="https://guille199715.github.io/DemoCssenza/" target="_blank" rel="noopener">Ver demo</a>
+        </article>
 
-</section>
+        <article class="project-card reveal">
+          <div class="project-preview preview-dilucca" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="project-content">
+            <p>Comercio</p>
+            <h3>Mueblería DiLucca</h3>
+            <span>Presentación de productos, estética cálida y contacto directo para consultas.</span>
+          </div>
+          <a href="https://www.mueblesdilucca.com.ar" target="_blank" rel="noopener">Ver sitio</a>
+        </article>
+      </div>
+    </section>
 
-<!-- PROCESO -->
-<section id="proceso" class="animar">
-  <h3>Cómo trabajo</h3>
+    <section class="cta-band section-clip reveal">
+      <div>
+        <p class="eyebrow">Impulso rápido</p>
+        <h2>Si tu web no explica bien lo que hacés, está perdiendo oportunidades.</h2>
+      </div>
+      <a class="btn btn-primary" href="https://wa.me/5493412473546?text=Hola%20Guillermo%2C%20quiero%20pedir%20un%20diagn%C3%B3stico%20para%20mi%20web%20o%20idea." target="_blank" rel="noopener">
+        Pedir diagnóstico
+      </a>
+    </section>
 
-  <p class="intro-proceso">
-    Un proceso claro, simple y transparente para que sepas qué esperar en cada etapa.
-  </p>
+    <section id="proceso" class="section-block process-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Cómo trabajamos</p>
+        <h2>Un camino simple para pasar de idea a sitio publicado.</h2>
+      </div>
 
-  <div class="grid-proceso">
-    <div class="paso">
-      <span class="numero">01</span>
-      <h4>Escuchamos tu idea</h4>
-      <p>Analizamos objetivos y necesidades.</p>
-    </div>
+      <div class="timeline">
+        <article class="step reveal">
+          <span>01</span>
+          <h3>Objetivo</h3>
+          <p>Definimos qué tiene que lograr la web y qué necesita entender el cliente.</p>
+        </article>
+        <article class="step reveal">
+          <span>02</span>
+          <h3>Estructura</h3>
+          <p>Ordenamos secciones, mensajes, llamadas a la acción y recorrido visual.</p>
+        </article>
+        <article class="step reveal">
+          <span>03</span>
+          <h3>Diseño y código</h3>
+          <p>Construimos una interfaz rápida, responsive y alineada a la identidad.</p>
+        </article>
+        <article class="step reveal">
+          <span>04</span>
+          <h3>Publicación</h3>
+          <p>Ajustamos detalles finales y dejamos el sitio listo para compartir.</p>
+        </article>
+      </div>
+    </section>
 
-    <div class="paso">
-      <span class="numero">02</span>
-      <h4>Diseñamos la experiencia</h4>
-      <p>Estructura, diseño y flujo.</p>
-    </div>
+    <section class="section-block faq-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Preguntas rápidas</p>
+        <h2>Antes de escribirme, quizás esto te ordena un poco.</h2>
+      </div>
 
-    <div class="paso">
-      <div class="numero">03</div>
-      <h4>Desarrollamos</h4>
-      <p>Código limpio y optimizado.</p>
-    </div>
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary>¿Puedo empezar aunque todavía no tenga todo el texto?</summary>
+          <p>Sí. Podemos partir de una idea, ordenar el mensaje y después pulir los textos durante el proceso.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿La web queda lista para celular?</summary>
+          <p>Sí. El diseño responsive es parte del trabajo, no un extra agregado al final.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Se puede conectar WhatsApp o Instagram?</summary>
+          <p>Sí. Podemos dejar llamadas a la acción visibles para que la consulta llegue por el canal que uses más.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Después se pueden sumar más secciones?</summary>
+          <p>Sí. La idea es construir una base ordenada para que después puedas crecer sin rehacer todo.</p>
+        </details>
+      </div>
+    </section>
 
-    <div class="paso">
-      <span class="numero">04</span>
-      <h4>Entrega</h4>
-      <p>Publicación y acompañamiento.</p>
-    </div>
-  </div>
-</section>
+    <section id="contacto" class="contact-section section-clip">
+      <div class="contact-copy reveal">
+        <p class="eyebrow">Hablemos</p>
+        <h2>Tu próxima web puede empezar con un mensaje.</h2>
+        <p>
+          Mandame qué querés vender, mostrar o mejorar. El formulario vuelve otro día; por ahora vamos directo y simple.
+        </p>
+      </div>
 
-<!-- CONTACTO -->
-<section id="contacto" class="animar">
-  <h3>Hablemos</h3>
-  <p>Contame tu idea y la llevamos a una web profesional.</p>
-  <a href="mailto:guillermo@tudominio.com" class="btn">Hablemos</a>
-</section>
+      <div class="contact-actions reveal">
+        <a class="contact-link whatsapp" href="https://wa.me/5493412473546?text=Hola%20Guillermo%2C%20quiero%20consultar%20por%20una%20web%20para%20mi%20negocio." target="_blank" rel="noopener">
+          <img src="whatsapp.svg" alt="" />
+          <span>
+            <strong>WhatsApp</strong>
+            <small>Respuesta directa</small>
+          </span>
+        </a>
+        <a class="contact-link instagram" href="https://www.instagram.com/cssenza" target="_blank" rel="noopener">
+          <img src="instagram.svg" alt="" />
+          <span>
+            <strong>Instagram</strong>
+            <small>@cssenza</small>
+          </span>
+        </a>
+      </div>
+    </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2025 CSSENZA STUDIO · Rosario, Argentina</p>
-</footer>
+    <section class="final-note section-clip reveal">
+      <p>No necesitás una web enorme. Necesitás una web que explique bien, genere confianza y haga fácil contactarte.</p>
+    </section>
+  </main>
 
-<!-- BOTÓN ARRIBA -->
-<button id="btnTop" aria-label="Volver arriba" class="btn-top">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M12 5l-7 7h4v7h6v-7h4z" />
-  </svg>
-</button>
+  <footer class="site-footer">
+    <p>© 2026 CSSENZA STUDIO · Rosario, Argentina</p>
+    <a href="#inicio">Volver arriba</a>
+  </footer>
 
-<!-- BOTONES FLOTANTES -->
-<div class="social-float">
-  <a href="https://wa.me/5493412473546" target="_blank" aria-label="WhatsApp">
-    <img src="./whatsapp.svg" alt="WhatsApp">
-  </a>
-
-  <a href="https://www.instagram.com/cssenza" target="_blank" aria-label="Instagram">
-    <img src="./instagram.svg" alt="Instagram">
-  </a>
-</div>
-
-<!-- SCRIPTS -->
-<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-<script src="script.js"></script>
-
+  <button class="back-top" type="button" data-back-top aria-label="Volver arriba">↑</button>
+  <script src="script.js"></script>
 </body>
 </html>
