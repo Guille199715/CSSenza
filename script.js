@@ -17,6 +17,7 @@ const timeline = document.querySelector(".timeline");
 const processSteps = document.querySelectorAll(".timeline .step");
 const faqItems = document.querySelectorAll(".faq-item");
 const magneticItems = document.querySelectorAll(".btn, .header-cta, .icon-button, .project-card a, .contact-link, .back-top");
+let scrollTicking = false;
 
 const savedTheme = localStorage.getItem("cssenza-theme");
 if (savedTheme === "light") {
@@ -57,6 +58,16 @@ function updateScrollState() {
   backTop.classList.toggle("visible", window.scrollY > 480);
   updateActiveNav();
   updateProcessLine();
+}
+
+function requestScrollUpdate() {
+  if (scrollTicking) return;
+
+  scrollTicking = true;
+  requestAnimationFrame(() => {
+    updateScrollState();
+    scrollTicking = false;
+  });
 }
 
 function updateActiveNav() {
@@ -197,8 +208,8 @@ backTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-window.addEventListener("scroll", updateScrollState, { passive: true });
-window.addEventListener("resize", updateScrollState);
+window.addEventListener("scroll", requestScrollUpdate, { passive: true });
+window.addEventListener("resize", requestScrollUpdate);
 
 updateThemeIcon();
 updateScrollState();

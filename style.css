@@ -1363,6 +1363,109 @@ body.modo-claro .project-band {
   }
 }
 
+@media (max-width: 768px) {
+  body {
+    background:
+      linear-gradient(180deg, rgba(15, 15, 15, 0.72), rgba(15, 15, 15, 0.94)),
+      url("fondo.png") center top / cover no-repeat;
+  }
+
+  body.modo-claro {
+    background:
+      linear-gradient(180deg, rgba(244, 246, 248, 0.90), rgba(244, 246, 248, 0.98)),
+      url("fondo.png") center top / cover no-repeat;
+  }
+
+  body::before,
+  body::after {
+    display: none;
+  }
+
+  .site-header,
+  .impact-item,
+  .service-card,
+  .audience-card,
+  .option-tabs,
+  .option-panel,
+  .detail-card,
+  .trust-section,
+  .cta-band,
+  .faq-item,
+  .contact-link,
+  .mobile-menu {
+    backdrop-filter: none;
+  }
+
+  .hero-inner h1,
+  .section-heading h2,
+  .contact-copy h2,
+  .trust-section h2,
+  .final-note p,
+  .cta-band h2 {
+    opacity: 1;
+    clip-path: none;
+    transform: none;
+    transition: none;
+  }
+
+  .scroll-cue span {
+    animation: none;
+  }
+
+  .section-block::before,
+  .impact-strip::before,
+  .contact-section::before {
+    transition-duration: 260ms;
+  }
+
+  .reveal {
+    --reveal-x: 0px;
+    --reveal-y: 16px;
+    filter: none;
+    transform: translate3d(0, var(--reveal-y), 0);
+    transition:
+      opacity 320ms ease,
+      transform 320ms ease;
+    transition-delay: 0ms;
+    will-change: auto;
+  }
+
+  .reveal-from-left,
+  .reveal-from-right {
+    --reveal-x: 0px;
+    --reveal-y: 16px;
+  }
+
+  .project-preview::before,
+  .project-preview span,
+  .project-card.visible .project-preview::before,
+  .project-card.visible .project-preview span {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .project-card.visible .project-preview span:nth-child(1),
+  .project-card.visible .project-preview span:nth-child(2),
+  .project-card.visible .project-preview span:nth-child(3) {
+    transition-delay: 0ms;
+  }
+
+  .project-card.visible .project-preview span:nth-child(3),
+  .timeline::after,
+  .step.process-lit::after {
+    box-shadow: none;
+  }
+
+  .timeline::after {
+    transition: none;
+  }
+
+  .faq-item::before {
+    transition-duration: 220ms;
+  }
+}
+
 @media (max-width: 640px) {
   .site-header {
     top: 10px;
